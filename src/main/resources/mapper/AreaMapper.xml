@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pet.mapper.AreaMapper">
 	<select id="findAllArea" resultType="Area">
-		select *from Area
+		select * from Area
 		<where>
 			<if test="areaName!=null and areaName!=''">
 				areaName like concat('%',concat(#{areaName},'%'))

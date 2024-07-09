@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pet.mapper.UnitMapper">
 	<select id="findAllUnit" resultType="Unit">
-		select *from Unit
+		select * from Unit
 		<where>
 			<if test="unitName!=null and unitName!=''">
 				unitName like concat('%',concat(#{unitName},'%'))

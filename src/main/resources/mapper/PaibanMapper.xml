@@ -15,7 +15,7 @@ select d.doctorId doctorId,d.doctorName  doctorName, p.one one,p.two two,p.three
   update paiban set one=#{one},two=#{two},three=#{three},four=#{four},five=#{five},six=#{six},seven=#{seven} where doctorId=#{doctorId}
  </update>
     <select id="findAllBan" resultType="ban">
-        select*from ban
+        select * from ban
     </select>
     <insert id="insertPaiban" parameterType="paiban">
         insert into paiban (one,two,three,four,five,six,seven,doctorId)values (#{one},#{two},#{three},#{four},#{five},#{six},#{seven},#{doctorId})

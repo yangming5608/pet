@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pet.mapper.UpplierMapper">
      <select id="findAllUpplier" resultType="Upplier">
-             select *from Upplier where state=0
+             select * from Upplier where state=0
              <if test="supplierName!=null and supplierName!=''">
                  and supplierName like concat('%',concat(#{supplierName},'%'))
              </if>

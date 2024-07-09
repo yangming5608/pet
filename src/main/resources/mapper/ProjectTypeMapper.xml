@@ -5,7 +5,7 @@
 <mapper namespace="com.pet.mapper.PrjectTypeMapper">
     <!--  项目大类增删改查开始   -->
 <select id="findAllProjecttype" resultType="projecttype">
-     select *from projecttype
+     select * from projecttype
      <where>
          <if test="projectName!=null and projectName!=''">
              projectName like concat('%',concat(#{projectName},'%'))
@@ -24,7 +24,7 @@
     <!--项目大类增删改查结束-->
    <!--收费比例增删改查开始-->
     <select id="findAllMoneytype" resultType="Moneytype">
-        select *from Moneytype
+        select * from Moneytype
         <where>
             <if test="moneytype!=null and moneytype!=''">
                 moneytype like concat('%',concat(#{moneytype},'%'))
@@ -87,7 +87,7 @@
     <!-- 住院收费项目增删改查结束-->
     <!-- 床位增删改查开始-->
     <select id="findAllBed" resultType="Bed">
-        select*from bed b,departments d where b.departmentId=d.departmentId
+        select * from bed b,departments d where b.departmentId=d.departmentId
             <if test="bedname!=null and bedname!=''">
                 and bedname like concat('%',concat(#{bedname},'%'))
             </if> order by b.bedId desc

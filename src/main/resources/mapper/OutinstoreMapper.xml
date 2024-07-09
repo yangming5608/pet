@@ -46,7 +46,7 @@ delete  from drugstore where rugstoreId=#{rugstoreId}
     </insert>
    <!-- //查询药房是否已存在此药-->
     <select id="selpharymacyname" parameterType="Ypharmacy" resultType="Integer">
-         SELECT count(*)from pharmacy where pharmacyName=#{pharmacyName}
+         SELECT count(*) from pharmacy where pharmacyName=#{pharmacyName}
     </select>
 <!--    //已经存在则修改此药数量-->
     <update id="uppharymacy">

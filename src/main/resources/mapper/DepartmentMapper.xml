@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pet.mapper.DepartmentMapper">
  <select id="departmentList" resultType="departments">
-     select *from departments
+     select * from departments
      <where>
          <if test="department!=null and department!=''">
             and department like concat('%',concat(#{department},'%'))

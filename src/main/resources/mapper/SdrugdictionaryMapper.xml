@@ -19,13 +19,13 @@
         delete from drugdictionary where drugId=#{drugId}
     </delete>
     <select id="findAllArea" resultType="Area">
-        select*from area
+        select * from area
     </select>
     <select id="findAllType" resultType="Type">
-        select*from type
+        select * from type
    </select>
     <select id="findAllUnit" resultType="Unit">
-        select*from unit
+        select * from unit
     </select>
     <select id="count" resultType="int">
         select count(*) from drugdictionary where drugName=#{drugName}

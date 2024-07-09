@@ -33,7 +33,7 @@
         where userid=#{userid}
     </update>
     <select id="queryAllRole" resultType="role">
-        select*from sys_role where available=1
+        select * from sys_role where available=1
     </select>
     <insert id="addUser" parameterType="User">
         insert into sys_user(loginname,identity,realname,sex,address,phone,pwd,position,type,available,salt)values
@@ -62,7 +62,7 @@
 	</insert>
 
     <select id="updateLogin" resultType="user">
-        select*from sys_user where userid=#{userid}
+        select * from sys_user where userid=#{userid}
     </select>
     <update id="editLogin" parameterType="user">
         update sys_user set identity=#{identity},realname=#{realname},sex=#{sex},address=#{address},phone=#{phone} where userid=#{userid}

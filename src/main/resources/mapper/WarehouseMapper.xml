@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pet.mapper.WarehuoseMapper">
 	<select id="findAllWarehuose" resultType="Warehuose">
-		select *from Warehuose
+		select * from Warehuose
 		<where>
 			<if test="supplierName!=null and supplierName!=''">
 				supplierName like concat('%',concat(#{supplierName},'%'))
@@ -12,7 +12,7 @@
 		</where>
 	</select>
 	<insert id="addWarehuose" parameterType="Warehuose">
-		insert into Warehuose(supplierName)values(#{supplierName})
+		insert into Warehuose(supplierName) values (#{supplierName})
 	</insert>
 	<delete id="deleteWarehuose" parameterType="Integer">
 		delete from Warehuose where warehouseId=#{warehouseId}

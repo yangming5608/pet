@@ -4,7 +4,7 @@
 
 <mapper namespace="com.pet.mapper.TypeMapper">
 	<select id="findAllType" resultType="type">
-		select *from type
+		select * from type
 		<where>
 			<if test="typeName!=null and typeName!=''">
 				typeName like concat('%',concat(#{typeName},'%'))

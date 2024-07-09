@@ -4,16 +4,16 @@
 
 <mapper namespace="com.pet.mapper.MenuMapper">
     <select id="loginname" resultType="User">
-        select*from sys_user where loginname=#{loginname} and available=1
+        select * from sys_user where loginname=#{loginname} and available=1
     </select>
 
     <!-- 加载左侧导航 查询所有可用菜单-->
     <select id="loadAvailableMenu" resultType="Menu">
-        select *from sys_menu where available=1
+        select * from sys_menu where available=1
     </select>
     <!--查询右侧加载的菜单-->
     <select id="queryMenuAllList" resultType="menu">
-        select*from sys_menu
+        select * from sys_menu
         <where>
             <if test="title!=null and title!=''">
                 title like concat('%',concat(#{title},'%'))

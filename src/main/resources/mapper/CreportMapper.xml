@@ -94,11 +94,11 @@
     </update>
     <!--根据患者ID查询患者的详细信息-->
     <select id="selById" resultType="ReportVo">
-        select*from report where reportId=#{reportId}
+        select * from report where reportId=#{reportId}
     </select>
     <!--判断正在就诊的电话唯一-->
     <select id="phone" parameterType="ReportVo" resultType="int">
-        select count(*)from report where phone=#{phone} and state=1
+        select count(*) from report where phone=#{phone} and state=1
     </select>
     <!--判断正在就诊的电话唯一-->
     <select id="carid" parameterType="ReportVo" resultType="int">

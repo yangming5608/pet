@@ -83,7 +83,7 @@ drugstorenum=#{drugstorenum},  batch=#{batch} where rugstoreId=#{rugstoreId}
     </insert>
     <!-- 添加采购药品时 查询采购表是否已存在此药-->
     <select id="selcaigouname" resultType="Integer">
-    SELECT count(*)from  caigou where caigouname=#{caigouname}
+    SELECT count(*) from caigou where caigouname=#{caigouname}
 
 </select>
     <!--   已存在则修改数量-->
